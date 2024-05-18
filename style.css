@@ -1,0 +1,366 @@
+body{
+    font-family: HP Simplified;
+    background-color: black;
+    color: white;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-content{
+    background-color: black;
+}
+
+.sidebar-check{
+    display: none; 
+}
+
+.sidebar-toggle li{
+    list-style-type: none;
+}
+
+.sidebar-content label img{
+    cursor: pointer;
+    width: 50px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.sidebar-toggle li{
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: large;
+    border: 1px solid;
+    border-color: brown;
+    border-left: 0px;
+    border-right: 0px;
+    height: fit-content;
+}
+
+.sidebar-toggle a{
+    color: yellow;
+    text-decoration: none;
+}
+
+.sidebar-toggle a:hover{
+    color: palegreen;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: x-large;
+}
+
+.sidebar-toggle a:active{
+    color: goldenrod;
+}
+
+.sidebar-toggle{
+    max-width: 0px;
+    max-height: 0px;
+    transition: 2s;
+    overflow: hidden;
+}
+
+.sidebar-check:checked ~.sidebar-toggle{
+    max-width: 100vh;
+    max-height: 100vh;
+    padding: 10px 20px;
+}
+
+.it{
+    position: relative;
+    text-align: center;
+}
+
+.it img{
+    max-width:100%;
+    filter: blur(10px);
+}
+
+.thought p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+h2{
+    text-align: center; 
+    text-decoration: underline; 
+    color: white;
+}
+
+.about p{
+    font-style: italic;
+}
+
+.skills h3{
+    text-align: center;
+    animation: sample1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sample1{
+    from{
+        font-style: italic;
+    }
+    to{
+        text-decoration: underline;
+    }
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+
+.rows button{
+    border: 5px solid;
+    border-color: brown;
+    margin-left: 20px;
+    margin-right: 20px;
+    animation-name: sample2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.rows h4{
+    text-align: center;
+    animation: sample3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sample2 {
+    from{
+        border-radius: 4px;
+        background-color: brown;
+    }
+    to{
+        border-radius: 40px;
+        background-color: yellow;
+    }
+}
+
+@keyframes sample3 {
+    0%{
+        font-style: italic;
+    }
+    100%{
+        text-decoration: underline;
+    }
+}
+
+.education{
+    border-left: 5px solid;
+    border-color: white;
+    padding-left: 20px;
+}
+
+.content{
+    border: 5px solid;
+    border-color:wheat;
+    position: relative;
+    height: fit-content;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background:linear-gradient(45deg,pink,grey,violet,yellow,yellowgreen,gold,goldenrod);
+}
+
+.content::before{
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    border: 5px solid;
+    border-radius: 50px;
+    background-color: brown;
+    position: absolute;
+    top: 20px;
+    left: -38px;
+}
+
+.content::after{
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-color: transparent red transparent transparent;
+    border-width: 20px;
+    position: absolute;
+    left: -40px;
+    top: 10px;
+}
+
+.content h3{
+    background-color:darkblue;
+    width: fit-content;
+    text-decoration: underline;
+}
+
+.content h4{
+    background-color:blue;
+    width:fit-content;
+    font-style:italic;
+}
+
+.content p{
+    background-color:darkslateblue;
+    width: fit-content;
+}
+
+.experience{
+    border-left: 5px solid;
+    border-color: white;
+    padding-left: 20px;
+}
+
+.mycontent{
+    border: 5px solid;
+    border-color:wheat;
+    height: fit-content;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 20px;
+    background:linear-gradient(45deg,goldenrod,gold,yellowgreen,yellow,violet,grey,pink);
+}
+
+.mycontent::before{
+    content: ' ';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    border: 5px solid;
+    border-radius: 10px;
+    background-color: brown;
+    top: 20px;
+    left: -38px;
+}
+
+.mycontent::after{
+    content: ' ';
+    height: 0;
+    width: 0;
+    border-width: 20px;
+    border-color: transparent red transparent transparent;
+    border-style: solid;
+    position: absolute;
+    top: 10px;
+    left: -40px;
+}
+
+.mycontent h3{
+    background-color:darkblue;
+    width: fit-content;
+    text-decoration: underline;
+}
+
+.mycontent h4{
+    background-color:blue;
+    width:fit-content;
+    font-style:italic;
+}
+
+.mycontent h5{
+    background-color:blueviolet;
+    width:fit-content;
+    font-style:italic;
+}
+
+.mycontent p{
+    background-color:darkslateblue;
+    width: fit-content;
+}
+
+.hobbies p{
+    text-align: center;
+}
+
+.lastrow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.col1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.col1 button{
+    border: 5px solid;
+    border-radius: 40px;
+    border-color: brown;
+}
+
+.col1 button:hover{
+    background-color: palegreen;
+}
+
+.col1 button:active{
+    background-color: gold;
+}
+
+.col2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.col3{
+    text-align: center;
+}
+
+.col3 a{
+    text-decoration: none;
+}
+
+.manage p{
+    cursor: pointer;
+    font-style: italic; 
+    text-decoration: underline;
+    text-align: center;
+}
+
+.manage abbr{
+    color: green;
+}
+
+.above button{
+    border: 3px solid; 
+    border-radius: 20px;
+    border-color: brown; 
+    cursor: pointer;
+}
+
+.above a{
+    text-decoration: none;
+    font-style: italic;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.music{
+    display: none;
+}
+
+
+
